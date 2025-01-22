@@ -1,0 +1,24 @@
+framework:
+    workflows:
+        conge_status:
+            type: 'state_machine'
+            marking_store:
+                type: 'single_state'
+                property: 'statut'
+            supports:
+                - App\Entity\Conge
+            places:
+                - en_attente
+                - approuvé
+                - refusé
+                - annulé
+            transitions:
+                approve:
+                    from: en_attente
+                    to: approuvé
+                refuse:
+                    from: en_attente
+                    to: refusé
+                cancel:
+                    from: [approuvé, refusé]
+                    to: annulé
