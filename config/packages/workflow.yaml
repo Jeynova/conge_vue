@@ -3,7 +3,7 @@ framework:
         conge_status:
             type: 'state_machine'
             marking_store:
-                type: 'single_state'
+                type: 'method'
                 property: 'statut'
             supports:
                 - App\Entity\Conge

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<h1>Connexion Administrateur</h1>
+	<form method="post" action="{{ path('admin_login') }}">
+		<label for="email">Email</label>
+		<input type="email" id="email" name="_username" required autofocus>
+		<label for="password">Mot de passe</label>
+		<input type="password" id="password" name="_password" required>
+		<button type="submit">Se connecter</button>
+	</form>
+{% endblock %}
