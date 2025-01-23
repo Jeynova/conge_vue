@@ -11,12 +11,20 @@ security:
     firewalls:
         admin:
             pattern: ^/admin
+            remember_me:
+                secret: '%env(APP_SECRET)%'
+                lifetime: 604800 # 7 jours
+                path: /admin
             custom_authenticators:
                 - App\Security\AdminAuthenticator
             logout:
                 path: /admin/logout
 
         main:
+            remember_me:
+                secret: '%env(APP_SECRET)%'
+                lifetime: 604800 # 7 jours
+                path: /
             custom_authenticators:
                 - App\Security\UserAuthenticator
             logout:

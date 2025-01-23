@@ -39,8 +39,18 @@ class UserAuthenticator extends AbstractLoginFormAuthenticator
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $firewallName): ?Response
     {
-        // Redirection vers la page d'accueil après authentification réussie
-        return new RedirectResponse($this->urlGenerator->generate('home'));
+        // Redirection basée sur les rôles
+        $roles = $token->getRoleNames();
+
+        if (in_array('ROLE_CEO', $roles)) {
+            return new RedirectResponse($this->urlGenerator->generate('ceo_dashboard')); // Remplacez par votre route
+        }
+
+        if (in_array('ROLE_RH', $roles)) {
+            return new RedirectResponse($this->urlGenerator->generate('rh_dashboard')); // Remplacez par votre route
+        }
+
+        return new RedirectResponse($this->urlGenerator->generate('user_dashboard')); // Default redirection
     }
 
     protected function getLoginUrl(Request $request): string
