@@ -33,6 +33,7 @@ Encore
     // but, you probably want this, unless you're building a single-page app
     .enableSingleRuntimeChunk()
     .enableVueLoader() // Active le support pour Vue
+    .enableSassLoader()
 
     /*
      * FEATURE CONFIG

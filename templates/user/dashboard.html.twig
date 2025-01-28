@@ -1,0 +1,5 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div id="app" data-user='{{ user|json_encode }}'></div>
+{% endblock %}

@@ -1,11 +1,18 @@
 <template>
-    <div>
-        <h1>Bienvenue dans la gestion des congés</h1>
-    </div>
+  <v-app>
+    <v-main>
+      <dashboard />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
+import Dashboard from "./components/UserDashboard.vue";
+
 export default {
-    name: 'App',
+  name: "App",
+  components: {
+    Dashboard,
+  },
 };
 </script>

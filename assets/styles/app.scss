@@ -1,0 +1,19 @@
+@use "sass:math";
+@use '~bootstrap/scss/bootstrap' as *;// Si vous utilisez Bootstrap
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #1976D2; /* Couleur primaire de Vuetify */
+    color: white;
+    padding: 1rem;
+}
+
+main {
+    padding: 2rem;
+}
