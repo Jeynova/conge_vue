@@ -9,8 +9,11 @@
         "@symfony/webpack-encore": "^5.0.0",
         "core-js": "^3.38.0",
         "regenerator-runtime": "^0.13.9",
+        "sass": "^1.83.4",
+        "sass-loader": "^16.0.1",
         "webpack": "^5.74.0",
         "webpack-cli": "^5.1.0",
+        "webpack-dev-server": "^5.2.0",
         "webpack-notifier": "^1.15.0"
     },
     "license": "UNLICENSED",
@@ -22,8 +25,11 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "@mdi/font": "^7.4.47",
         "@vue/compiler-sfc": "^3.5.13",
-        "vue": "^3.5.13",
-        "vue-loader": "^17.3.1"
+        "material-design-icons-iconfont": "^6.7.0",
+        "vue": "^3.0.0",
+        "vue-loader": "^17.3.1",
+        "vuetify": "^3.0.0"
     }
 }
